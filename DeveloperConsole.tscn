@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfh74ke74xr2u"]
+
+[ext_resource type="Script" path="res://scripts/DeveloperConsole.cs" id="1_jn8gp"]
+
+[node name="DeveloperConsole" type="Control" node_paths=PackedStringArray("InputBar", "Display", "HintContainer", "HintDisplay")]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_left = 100.0
+offset_top = 36.0
+offset_right = 976.0
+offset_bottom = 636.0
+script = ExtResource("1_jn8gp")
+InputBar = NodePath("PanelContainer/VBoxContainer/InputBar")
+Display = NodePath("PanelContainer/VBoxContainer/ScrollContainer/Display")
+HintContainer = NodePath("HintContainer")
+HintDisplay = NodePath("HintContainer/VBoxContainer/ScrollContainer/Display")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Display" type="RichTextLabel" parent="PanelContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+scroll_following = true
+
+[node name="InputBar" type="LineEdit" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+caret_blink = true
+
+[node name="HintContainer" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 603.0
+offset_right = 875.0
+offset_bottom = 703.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HintContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HintContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Display" type="RichTextLabel" parent="HintContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+fit_content = true
+scroll_following = true
