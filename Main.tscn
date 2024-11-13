@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bup2g5hu6x4g0"]
+
+[ext_resource type="Script" path="res://scripts/Main.cs" id="1_r6imd"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 1.0
+offset_bottom = 1.0
+script = ExtResource("1_r6imd")
+
+[node name="UI" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sound" type="Node" parent="."]
